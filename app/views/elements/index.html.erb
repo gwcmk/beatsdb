@@ -1,0 +1,20 @@
+<div class="container search">
+  <%= form_tag(elements_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: "Search elements by title" %>
+  <% end %>
+</div>
+
+<div class="container">
+    <div class="row element">
+      <div class="col-md-12">
+       <% @elements.each do |element| %>
+        <div class="col-md-4">
+          <div class="element-panel">
+            <%= element.artist %><br>
+            <%= link_to "View page", element %>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<h2>New element</h2>
+
+<div class="container new-form">
+  <%= form_for @element, html: {role: "form"} do |f| %>
+    <%= render(:partial => "form", :locals => {:f => f}) %>
+  <% end %>
+</div>
+
+<script>
+$('form#new_element').on('submit', function() {
+  field = $(this).find('input#element_url');
+
+  field.val(getEmbed(field.val()));
+});
+
+function getEmbed(url) {
+    var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    var match = url.match(regExp);
+
+    if (match && match[2].length == 11) {
+        return 'http://www.youtube.com/embed/' + match[2];
+    } else {
+        return 'error';
+    }
+}
+</script>

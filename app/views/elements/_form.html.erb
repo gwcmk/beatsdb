@@ -1,0 +1,23 @@
+<div class="form-group">
+  <%= f.label :time %><br>
+  <%= f.text_field :time, class: 'form-control', :placeholder => "When does this sound occur in the song? Example: (0:00 - 0:45)" %>
+</div>
+
+<div class="form-group">
+  <%= f.label :source %><br>
+  <%= f.text_field :source, class: 'form-control', :placeholder => "What is the source of this sound? Example: VSTs, instruments, or drum/sample kits." %>
+</div>
+
+<div class="form-group">
+  <%= f.label :description %><br>
+  <%= f.text_area :description, class: 'form-control', :placeholder => "Describe this sound and how it is used in the song." %>
+</div>
+
+<div class="form-group">
+  <%= f.label :song_id %><br>
+  <%= f.text_field :song_id, class: 'form-control', :placeholder => "Enter the corresponding song's ID" %>
+</div>
+
+<div class="form-group">
+  <%= f.submit class: 'btn btn-primary' %>
+</div>

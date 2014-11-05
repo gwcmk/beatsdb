@@ -1,0 +1,30 @@
+<div class="container search">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="col-md-6">
+        <h2>Songs</h2>
+      </div>
+      <div class="col-md-6">
+        <%= form_tag(songs_path, :method => "get", id: "search-form") do %>
+        	<%= text_field_tag :search, params[:search], class: 'form-control', placeholder: "Search songs by title" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+    <div class="row song">
+      <div class="col-md-12">
+       <% @songs.each do |song| %>
+        <div class="col-md-4">
+          <div class="song-panel">
+            <%= song.title %><br>
+            <%= song.artist %><br>
+            <%= link_to "View page", song %>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+</div>

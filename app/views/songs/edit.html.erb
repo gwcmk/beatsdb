@@ -1,0 +1,22 @@
+<%= form_for @song do |f| %>
+  <%= render(:partial => "form", :locals => {:f => f}) %>
+<% end %>
+
+<script>
+$('form').on('submit', function() {
+  field = $(this).find('input#song_url');
+
+  field.val(getEmbed(field.val()));
+});
+
+function getEmbed(url) {
+    var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    var match = url.match(regExp);
+
+    if (match && match[2].length == 11) {
+        return 'http://www.youtube.com/embed/' + match[2];
+    } else {
+        return 'error';
+    }
+}
+</script>
