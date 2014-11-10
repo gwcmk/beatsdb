@@ -20,6 +20,8 @@
 	</div>
 </div>
 
+<% count = 0 %>
+
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
@@ -27,16 +29,40 @@
 				<h3>Samples</h3>
 				<% @song.samples.each do |sample| %>
 				    <div class="sample">
-				      <h4><%= sample.time %> - <%= sample.artist %></h4>
+				    	<button type="button" class="btn btn-primary modal-btn" data-toggle="modal" data-target=".modal-lg-<%= count %>"><h4><%= sample.time %> - <%= sample.artist %></h4></button>
+				    	<div class="modal fade modal-lg-<%= count %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						  <div class="modal-dialog modal-lg">
+						    <div class="modal-content">
+						    	<h2 class="modal-title" id="myModalLabel"><%= sample.time %> - <%= sample.artist %></h2>
+						      	<h4><%= sample.description %></h4>
+						      	<div class="embed-responsive embed-responsive-16by9">
+							      <iframe class="embed-video" src="<%= sample.url %>?html5=1" allowfullscreen></iframe>
+							    </div>
+						    </div>
+						  </div>
+						</div>
 				    </div>
+				    <% count += 1 %>
 				<% end %>
 			</div>
 			<div class="col-md-6">
 				<h3>Other elements</h3>
 				<% @song.elements.each do |element| %>
 				    <div class="element">
-				      <h4><%= element.time %> - <%= element.source %></h4>
+				    	<button type="button" class="btn btn-primary modal-btn" data-toggle="modal" data-target=".modal-lg-<%= count %>"><h4><%= element.time %> - <%= element.source %></h4></button>
+				    	<div class="modal fade modal-lg-<%= count %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						  <div class="modal-dialog modal-lg">
+						    <div class="modal-content">
+						    	<h2 class="modal-title" id="myModalLabel"><%= element.time %> - <%= element.source %></h2>
+						      	<h4><%= element.description %></h4>
+						      	<!-- <div class="embed-responsive embed-responsive-16by9">
+							      <iframe class="embed-video" src="?html5=1" allowfullscreen></iframe>
+							    </div> -->
+						    </div>
+						  </div>
+						</div>
 				    </div>
+				    <% count += 1 %>
 				<% end %>
 			</div>
 		</div>
