@@ -5,6 +5,7 @@ class CreateSongs < ActiveRecord::Migration
       t.string :artist
       t.string :album
       t.string :url
+      t.string :image
       t.text :description
 
       t.timestamps
@@ -12,6 +13,6 @@ class CreateSongs < ActiveRecord::Migration
   end
 
   def down
-    drop_table :subjects
+    drop_table :songs
   end
 end

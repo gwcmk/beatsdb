@@ -1,0 +1,18 @@
+<%= form_tag(songs_path, :method => "get", id: "search-form") do %>
+	<%= text_field_tag :search, params[:search], class: 'form-control', placeholder: "Search songs by title" %>
+<% end %>
+
+<div class="container">
+    <div class="row song">
+      <div class="col-md-12">
+       <% @songs.each do |song| %>
+        <div class="col-md-12">
+            <%= song.title %><br>
+            <%= song.artist %><br>
+            <%= song.id %><br>
+            <%= link_to "View page", song %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+</div>

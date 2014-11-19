@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 20141105001627) do
     t.string   "artist"
     t.string   "album"
     t.string   "url"
+    t.string   "image"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"

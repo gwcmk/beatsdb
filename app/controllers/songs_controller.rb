@@ -33,7 +33,7 @@ class SongsController < ApplicationController
     @song = Song.new(song_params)
  
     if @song.save
-      redirect_to(:action => 'show', :song_id => @song.id)
+      render('index')
     else
       render('new')
     end
@@ -51,8 +51,16 @@ class SongsController < ApplicationController
     end
   end
 
+  def search
+    if params[:search]
+      @songs = Song.search(params[:search]).order("created_at DESC")
+    else
+      @songs = Song.all.order('created_at DESC')
+    end
+  end
+
   private
   def song_params
-    params.require(:song).permit(:title, :artist, :album, :url, :description, :json)
+    params.require(:song).permit(:title, :artist, :album, :url, :image, :description)
   end
 end
