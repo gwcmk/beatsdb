@@ -9,7 +9,7 @@ class SongsController < ApplicationController
 
   def destroy
     @song = Song.find(params[:id]).destroy
-    redirect_to(:action => 'index', :song_id => @song.id)
+    redirect_to(:action => 'index')
   end
 
   def edit
