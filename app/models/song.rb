@@ -5,8 +5,13 @@ class Song < ActiveRecord::Base
 	accepts_nested_attributes_for :elements
 	before_save :yt_convert
 
+	validates :title, presence: true
+	validates :artist, presence: true
+	validates :album, presence: true
+	validates :description, presence: true
+	validates :url, presence: true, format: { with: /\A(?:https?:\/\/)?(?:www\.)?youtu(?:\.be|be\.com)\/(?:watch\?v=)?([\w-]{10,})/ }
+
 	def self.search(query)
-	# where(:title, query) -> This would return an exact match of the query
 		where("title ilike ?", "%#{query}%") 
 	end
 
