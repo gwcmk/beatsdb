@@ -12,8 +12,8 @@
 		      		<%= @song.title %>
 		      	</span>
 		      </h3>
-		      <br />
-		      <%= @song.description %>
+		      <br>
+		      <h4><%= markdown.render(@song.description).html_safe %></h4>
 
 		      <%= link_to "Delete", song_path, method: :delete, data:{confirm: "You sure?"} %>
 		  </div>
@@ -44,9 +44,11 @@
 					            </div>
 						    	<h2 class="modal-title" id="myModalLabel"><%= sample.starting_time %><% if !sample.other_times.empty? %>, <%= sample.other_times %><% end %> - <%= sample.artist %></h2>
 						      	<h4><%= markdown.render(sample.description).html_safe %></h4>
+						      	<% if !sample.url.empty? %>
 						      	<div class="embed-responsive embed-responsive-16by9">
 							      <iframe class="embed-video" src="<%= sample.url %>" allowfullscreen></iframe>
 							    </div>
+							    <% end %>
 							    <div class="modal-footer">
 					                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					            </div>

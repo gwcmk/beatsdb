@@ -29,7 +29,7 @@ u.save!
 
 end
 
-song = Song.new(
+song1 = Song.new(
       title: "New Slaves",
       artist: "Kanye West",
       album: "Yeezus",
@@ -38,46 +38,80 @@ song = Song.new(
       description: "PRAISE YEEZUS"
 
   )
-  song.save
+  song1.save
 
 samp1 = Sample.new(
-        starting_time: "1:10",
+        starting_time: "0:00",
         other_times: "",
-        artist: "Someone",
-        url: "http://www.youtube.com/watch?v=dT3swdCJrrg",
-        description: "[I'm an inline-style link](https://www.google.com)",
+        artist: "Teachers",
+        url: "",
+        description: "The distinctive riff from New Slaves originated from a demo by Benjamin Bronfman, a member of a collective known as the Teachers. \/n Link: [http://teachers.fm/](http://teachers.fm/)",
         song_id: 1
 
   )
   samp1.save
 
 samp2 = Sample.new(
-        starting_time: "0:30",
+        starting_time: "2:51",
         other_times: "",
-        artist: "Someone Else",
-        url: "http://www.youtube.com/watch?v=dT3swdCJrrg",
-        description: "> Blockquotes are very handy in email to emulate reply text.  > This line is part of the same quote.",
+        artist: "Omega",
+        url: "http://www.youtube.com/watch?v=CGt-rTDkMcM",
+        description: "The sample begins at 0:30.",
         song_id: 1
 
   )
   samp2.save
 
 ele1 = Element.new(
-        starting_time: "1:10",
+        starting_time: "1:20",
         other_times: "",
-        source: "Someone",
-        description: "[I'm an inline-style link](https://www.google.com)",
+        source: "Verse 2",
+        description: "[Kanye called this the \"best rap verse of all time.\"](https://twitter.com/kanyewest/status/358614185086693377)",
         song_id: 1
 
   )
   ele1.save
 
-ele2 = Element.new(
-        starting_time: "0:30",
-        other_times: "",
-        source: "Someone Else",
-        description: "> Blockquotes are very handy in email to emulate reply text.  > This line is part of the same quote.",
-        song_id: 1
+song2 = Song.new(
+      title: "I Don't Fuck With You",
+      artist: "Big Sean",
+      album: "I Don't Fuck With You",
+      url: "http://www.youtube.com/watch?v=cZaJYDPY-YQ",
+      image: "http://thumbs.hh.ulximg.com/public/img/song/500_1410553070_artworks_000090836493_ld5aa3_t500x500_42.jpg",
+      description: "This song is the lead single for Big Sean's upcoming album. [Despite common belief, this song is not about Naya Rivera.](https://www.youtube.com/watch?v=xHg_RNa4pEc#t=140)"
 
   )
-  ele2.save
+  song2.save
+
+samp3 = Sample.new(
+        starting_time: "0:19",
+        other_times: "4:29",
+        artist: "D.J. Rogers",
+        url: "http://www.youtube.com/watch?v=slLZTCkKCDI",
+        description: "The sample starts at 0:07. This part of the song was produced by Kanye West.",
+        song_id: 2
+
+  )
+  samp3.save
+
+song3 = Song.new(
+      title: "6 God",
+      artist: "Drake",
+      album: "6 God",
+      url: "http://www.youtube.com/watch?v=NHZPpzLe73Y",
+      image: "https://i1.sndcdn.com/artworks-000095053782-whizz1-t500x500.jpg",
+      description: "[This was one of the songs that Drake released on October 25, 2014.](http://pitchfork.com/news/57203-drake-drops-three-tracks-6-god-how-bout-now-heat-of-the-moment/)"
+
+  )
+  song3.save
+
+samp4 = Sample.new(
+        starting_time: "0:02",
+        other_times: "",
+        artist: "David Wise",
+        url: "http://www.youtube.com/watch?v=CFRsMztuM30",
+        description: "The sample starts at 0:49. [Producer Syk Sense confirmed this on Twitter](http://i.imgur.com/kbkpsT6.png)",
+        song_id: 3
+
+  )
+  samp4.save

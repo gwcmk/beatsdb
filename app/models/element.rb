@@ -2,6 +2,11 @@ class Element < ActiveRecord::Base
 	belongs_to :song
 	before_save :st_to_secs
 
+	validates :starting_time, presence: true
+	validates :other_times, allow_blank: true, format: { with: /(\d{1,2}:\d{2}, ){1,10}\d{1,2}:\d{2}/ }
+	validates :source, presence: true
+	validates :description, presence: true
+
 	private
 	def st_to_secs
 		self.starting_time_i = st_to_int
