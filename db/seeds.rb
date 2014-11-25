@@ -42,6 +42,7 @@ song = Song.new(
 
 samp1 = Sample.new(
         starting_time: "1:10",
+        other_times: "",
         artist: "Someone",
         url: "http://www.youtube.com/watch?v=dT3swdCJrrg",
         description: "[I'm an inline-style link](https://www.google.com)",
@@ -52,6 +53,7 @@ samp1 = Sample.new(
 
 samp2 = Sample.new(
         starting_time: "0:30",
+        other_times: "",
         artist: "Someone Else",
         url: "http://www.youtube.com/watch?v=dT3swdCJrrg",
         description: "> Blockquotes are very handy in email to emulate reply text.  > This line is part of the same quote.",
@@ -62,6 +64,7 @@ samp2 = Sample.new(
 
 ele1 = Element.new(
         starting_time: "1:10",
+        other_times: "",
         source: "Someone",
         description: "[I'm an inline-style link](https://www.google.com)",
         song_id: 1
@@ -71,6 +74,7 @@ ele1 = Element.new(
 
 ele2 = Element.new(
         starting_time: "0:30",
+        other_times: "",
         source: "Someone Else",
         description: "> Blockquotes are very handy in email to emulate reply text.  > This line is part of the same quote.",
         song_id: 1
