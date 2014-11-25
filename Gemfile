@@ -40,6 +40,9 @@ gem 'redcarpet', '3.2.0'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data'
 
+# Gem used to extract video ID from YouTube URLs
+gem 'youtube_addy'
+
 # Rails 12factor for Heroku: https://github.com/heroku/rails_12factor
 group :production do
   gem 'rails_12factor'

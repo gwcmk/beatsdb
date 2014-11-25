@@ -1,7 +1,9 @@
 class CreateSamples < ActiveRecord::Migration
   def up
     create_table :samples do |t|
-      t.string :time
+      t.string :starting_time
+      t.integer :starting_time_i
+      t.string :other_times
       t.string :artist
       t.string :url
       t.text :description

@@ -3,6 +3,7 @@ class SamplesController < ApplicationController
     :new, :edit, :delete
   ]
   
+  
   def delete
     @sample = Sample.find(params[:id])
   end
@@ -51,6 +52,6 @@ class SamplesController < ApplicationController
 
   private
   def sample_params
-    params.require(:sample).permit(:time, :artist, :url, :description, :song_id)
+    params.require(:sample).permit(:starting_time, :starting_time_i, :other_times, :artist, :url, :description, :song_id)
   end
 end

@@ -17,7 +17,9 @@ ActiveRecord::Schema.define(version: 20141105001627) do
   enable_extension "plpgsql"
 
   create_table "elements", force: true do |t|
-    t.string   "time"
+    t.string   "starting_time"
+    t.integer  "starting_time_i"
+    t.string   "other_times"
     t.string   "source"
     t.text     "description"
     t.integer  "song_id"
@@ -52,7 +54,9 @@ ActiveRecord::Schema.define(version: 20141105001627) do
   add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
   create_table "samples", force: true do |t|
-    t.string   "time"
+    t.string   "starting_time"
+    t.integer  "starting_time_i"
+    t.string   "other_times"
     t.string   "artist"
     t.string   "url"
     t.text     "description"
