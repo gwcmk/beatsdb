@@ -23,6 +23,9 @@ gem 'font-awesome-sass', '4.2.2'
 # Bootstrap 3: https://github.com/twbs/bootstrap-sass
 gem 'bootstrap-sass', '3.3.0.1'
 
+# Bootstrap Material Design: https://github.com/Aufree/bootstrap-material-design
+gem 'bootstrap-material-design'
+
 # Figaro: https://github.com/laserlemon/figaro
 group :development, :test do
   gem 'figaro', '1.0.0'

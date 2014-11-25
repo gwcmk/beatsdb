@@ -18,6 +18,10 @@
   display: inline-block;
 }
 
+.subform{
+	margin-left: 2em;
+}
+
 // Index page
 .song{
 	.song-panel{
@@ -59,4 +63,8 @@
 	h4{
 		margin: 0;
 	}
+}
+
+.btn-primary:not(.btn-link){
+	background-color: #212121;
 }

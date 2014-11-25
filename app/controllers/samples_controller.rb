@@ -32,7 +32,7 @@ class SamplesController < ApplicationController
   def create
     @sample = Sample.new(sample_params)
     if @sample.save
-      redirect_to(:action => 'show', :sample_id => @sample.id)
+      redirect_to @sample
     else
       render('new')
     end

@@ -27,6 +27,8 @@ class SongsController < ApplicationController
 
   def new
     @song = Song.new
+    1.times { @song.samples.build }
+    1.times { @song.elements.build }
   end
 
   def create
@@ -61,6 +63,6 @@ class SongsController < ApplicationController
 
   private
   def song_params
-    params.require(:song).permit(:title, :artist, :album, :url, :image, :description)
+    params.require(:song).permit(:title, :artist, :album, :url, :image, :description, samples_attributes: [:id, :starting_time, :starting_time_i, :other_times, :artist, :url, :description, :song_id], elements_attributes: [:id, :starting_time, :starting_time_i, :other_times, :source, :url, :description, :song_id])
   end
 end

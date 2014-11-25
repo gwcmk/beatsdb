@@ -33,7 +33,7 @@ song = Song.new(
       title: "New Slaves",
       artist: "Kanye West",
       album: "Yeezus",
-      url: "http://www.youtube.com/embed/dT3swdCJrrg",
+      url: "http://www.youtube.com/watch?v=dT3swdCJrrg",
       image: "http://i.ytimg.com/vi/UY982Uo2TPI/maxresdefault.jpg",
       description: "PRAISE YEEZUS"
 
@@ -43,7 +43,7 @@ song = Song.new(
 samp1 = Sample.new(
         starting_time: "1:10",
         artist: "Someone",
-        url: "http://www.youtube.com/embed/dT3swdCJrrg",
+        url: "http://www.youtube.com/watch?v=dT3swdCJrrg",
         description: "[I'm an inline-style link](https://www.google.com)",
         song_id: 1
 
@@ -53,7 +53,7 @@ samp1 = Sample.new(
 samp2 = Sample.new(
         starting_time: "0:30",
         artist: "Someone Else",
-        url: "http://www.youtube.com/embed/dT3swdCJrrg",
+        url: "http://www.youtube.com/watch?v=dT3swdCJrrg",
         description: "> Blockquotes are very handy in email to emulate reply text.  > This line is part of the same quote.",
         song_id: 1
 

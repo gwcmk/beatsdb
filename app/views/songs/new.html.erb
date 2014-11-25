@@ -2,7 +2,75 @@
 <div class="container new-form">
   <%= form_for @song, html: {role: "form"} do |f| %>
     <%= render(:partial => "form", :locals => {:f => f}) %>
+      <h3>Samples</h3>
+  <div class="subform">
+  <%= f.fields_for :samples do |samples_form| %>
+    
+    <div class="form-group">
+      <%= samples_form.label :starting_time %><br>
+      <%= samples_form.text_field :starting_time, class: 'form-control', :placeholder => "When does this sample first occur in the song? (ex: 0:20)" %>
+    </div>
+
+    <div class="form-group">
+      <%= samples_form.label :other_times %><br>
+      <%= samples_form.text_field :other_times, class: 'form-control', :placeholder => "At what other times does this sample occur in the song? Separate times with commas." %>
+    </div>
+
+    <div class="form-group">
+      <%= samples_form.label :artist %><br>
+      <%= samples_form.text_field :artist, class: 'form-control', :placeholder => "Include all artists and features" %>
+    </div>
+
+    <div class="form-group">
+      <%= samples_form.label :url %><br>
+      <%= samples_form.text_field :url, class: 'form-control', :placeholder => "Enter a YouTube URL or a spotify embed URL" %>
+    </div>
+
+    <div class="form-group">
+      <%= samples_form.label :description %><br>
+      <%= samples_form.text_area :description, class: 'form-control', :placeholder => "Describe this sample. \nHow did the producer find it? \nIs there any relevance to the subject matter of the song? \netc." %>
+    </div>
+
+    <div class="form-group">
+      <%= samples_form.submit class: 'btn btn-primary' %>
+    </div>
+
   <% end %>
+  </div>
+
+  <h3>Elements</h3>
+  <div class="subform">
+  <%= f.fields_for :elements do |elements_form| %>
+    
+    <div class="form-group">
+      <%= elements_form.label :starting_time %><br>
+      <%= elements_form.text_field :starting_time, class: 'form-control', :placeholder => "When does this sample first occur in the song? (ex: 0:20)" %>
+    </div>
+
+    <div class="form-group">
+      <%= elements_form.label :other_times %><br>
+      <%= elements_form.text_field :other_times, class: 'form-control', :placeholder => "At what other times does this sample occur in the song? Separate times with commas." %>
+    </div>
+
+    <div class="form-group">
+      <%= elements_form.label :source %><br>
+      <%= elements_form.text_field :source, class: 'form-control', :placeholder => "Include all artists and features" %>
+    </div>
+
+    <div class="form-group">
+      <%= elements_form.label :description %><br>
+      <%= elements_form.text_area :description, class: 'form-control', :placeholder => "Describe this sample. \nHow did the producer find it? \nIs there any relevance to the subject matter of the song? \netc." %>
+    </div>
+
+    <div class="form-group">
+      <%= elements_form.submit class: 'btn btn-primary' %>
+    </div>
+
+  <% end %>
+  </div>
+  <% end %>
+
+
 </div>
 
 <script>

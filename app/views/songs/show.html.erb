@@ -35,17 +35,21 @@
 				<h3>Samples</h3>
 				<% @song.samples.sort_by {|s| s.starting_time_i}.each do |sample| %>
 				    <div class="sample">
-				    	<button type="button" class="btn btn-primary modal-btn" data-toggle="modal" data-target=".modal-lg-<%= count %>"><h4><%= sample.starting_time %><% if !sample.other_times.nil? %>, <%= sample.other_times %><% end %> - <%= sample.artist %></h4></button>
+				    	<button type="button" class="btn btn-primary modal-btn" data-toggle="modal" data-target=".modal-lg-<%= count %>"><h4><%= sample.starting_time %><% if !sample.other_times.empty? %>, <%= sample.other_times %><% end %> - <%= sample.artist %></h4></button>
 				    	<div class="modal fade modal-lg-<%= count %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 						  <div class="modal-dialog modal-lg">
 						    <div class="modal-content">
-						    	<h2 class="modal-title" id="myModalLabel"><%= sample.starting_time %><% if !sample.other_times.nil? %>, <%= sample.other_times %><% end %> - <%= sample.artist %></h2>
+						    	<div class="modal-header">
+					                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					            </div>
+						    	<h2 class="modal-title" id="myModalLabel"><%= sample.starting_time %><% if !sample.other_times.empty? %>, <%= sample.other_times %><% end %> - <%= sample.artist %></h2>
 						      	<h4><%= markdown.render(sample.description).html_safe %></h4>
-						      	<% if !sample.url.nil? %>
 						      	<div class="embed-responsive embed-responsive-16by9">
-							      <iframe class="embed-video" src="<%= sample.url %>?html5=1" allowfullscreen></iframe>
+							      <iframe class="embed-video" src="<%= sample.url %>" allowfullscreen></iframe>
 							    </div>
-							    <% end %>
+							    <div class="modal-footer">
+					                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					            </div>
 						    </div>
 						  </div>
 						</div>
@@ -57,16 +61,23 @@
 				<h3>Other elements</h3>
 				<% @song.elements.sort_by {|s| s.starting_time_i}.each do |element| %>
 				    <div class="element">
-				    	<button type="button" class="btn btn-primary modal-btn" data-toggle="modal" data-target=".modal-lg-<%= count %>"><h4><%= element.starting_time %> - <%= element.source %></h4></button>
+				    	<button type="button" class="btn btn-primary modal-btn" data-toggle="modal" data-target=".modal-lg-<%= count %>"><h4><%= element.starting_time %><% if !element.other_times.empty? %>, <%= element.other_times %><% end %> - <%= element.source %></h4></button>
 				    	<div class="modal fade modal-lg-<%= count %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 						  <div class="modal-dialog modal-lg">
 						    <div class="modal-content">
-						    	<h2 class="modal-title" id="myModalLabel"><%= element.starting_time %><% if !element.other_times.nil? %>, <%= element.other_times %><% end %> - <%= element.source %></h2>
+							    <div class="modal-header">
+					                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					            </div>
+						    	<h2 class="modal-title" id="myModalLabel"><%= element.starting_time %><% if !element.other_times.empty? %>, <%= element.other_times %><% end %> - <%= element.source %></h2>
 						      	<h4><%= markdown.render(element.description).html_safe %></h4>
 						      	<!-- <div class="embed-responsive embed-responsive-16by9">
 							      <iframe class="embed-video" src="?html5=1" allowfullscreen></iframe>
 							    </div> -->
+							    <div class="modal-footer">
+					                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					            </div>
 						    </div>
+
 						  </div>
 						</div>
 				    </div>

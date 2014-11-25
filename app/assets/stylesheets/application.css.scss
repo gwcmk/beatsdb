@@ -1,9 +1,24 @@
 /*
  * Overwritten by RailsBricks
  *
+ *= require bootstrap-material-design
  *= require_self
  */
 @import "railsbricks_custom";
 @import "songs";
 @import "samples";
+
+
+/* Override material design */
+.btn{
+	text-transform: none;
+}
+
+.btn-primary:not(.btn-link){
+	background-color: #212121;
+}
+
+.btn:not(.btn-link), .btn-default:not(.btn-link){
+	background-color: #212121;
+}
 

@@ -51,6 +51,6 @@ class ElementsController < ApplicationController
 
   private
   def element_params
-    params.require(:element).permit(:time, :source, :url, :description, :song_id)
+    params.require(:element).permit(:starting_time, :starting_time_i, :other_times, :source, :url, :description, :song_id)
   end
 end
