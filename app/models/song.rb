@@ -19,6 +19,6 @@ class Song < ActiveRecord::Base
 	def yt_convert
 		require 'youtube_addy'
 		id = YouTubeAddy.extract_video_id(self.url)
-		self.url = "http://www.youtube.com/embed/" + id + "?html5=1"
+		self.url = "https://www.youtube.com/embed/" + id + "?html5=1"
 	end
 end
