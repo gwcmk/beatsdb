@@ -18,14 +18,18 @@
       <div class="col-md-12">
        <% @songs.each do |song| %>
         <div class="col-md-4">  
+        <%= link_to song do %>
             <div class="song-panel">
               <img src="<%= song.image %>" alt="" class="img-responsive">
               <div class="song-summary">
-                <%= song.title %><br>
-                <%= song.artist %><br>
-                <%= link_to "View page", song %>
+                <h4><%= song.title %></h4>
+                <p>
+                  <%= song.artist %><% if !song.features.empty? %> (feat. <%= song.features %>)<% end %><br>
+                  Prod: <%= song.producers %>  
+                </p>
               </div>
-          </div>
+            </div>
+        <% end %>
         </div>
         <% end %>
       </div>

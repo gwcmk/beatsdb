@@ -3,7 +3,7 @@ class Sample < ActiveRecord::Base
 	before_save :st_to_secs, :yt_convert
 
 	validates :starting_time, presence: true, format: { with: /\d{1,2}:\d{2}/ }
-	validates :other_times, allow_blank: true, format: { with: /(\d{1,2}:\d{2}, ){1,10}\d{1,2}:\d{2}/ }
+	validates :other_times, allow_blank: true, format: { with: /(\d{1,2}:\d{2}, ){0,10}\d{1,2}:\d{2}/ }
 	validates :artist, presence: true
 	validates :description, presence: true
 	validates :url, allow_blank: true, format: { with: /\A(?:https?:\/\/)?(?:www\.)?youtu(?:\.be|be\.com)\/(?:watch\?v=)?([\w-]{10,})/ }

@@ -68,6 +68,8 @@ ActiveRecord::Schema.define(version: 20141105001627) do
   create_table "songs", force: true do |t|
     t.string   "title"
     t.string   "artist"
+    t.string   "features"
+    t.string   "producers"
     t.string   "album"
     t.string   "url"
     t.string   "image"

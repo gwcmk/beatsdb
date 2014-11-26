@@ -32,6 +32,8 @@ end
 song1 = Song.new(
       title: "New Slaves",
       artist: "Kanye West",
+      features: "",
+      producers: "Kanye West, Ben Bronfman, Mike Dean, Travis Scott, Noah Goldstein, Sham Joseph, Che Pope",
       album: "Yeezus",
       url: "http://www.youtube.com/watch?v=dT3swdCJrrg",
       image: "http://i.ytimg.com/vi/UY982Uo2TPI/maxresdefault.jpg",
@@ -75,6 +77,8 @@ ele1 = Element.new(
 song2 = Song.new(
       title: "I Don't Fuck With You",
       artist: "Big Sean",
+      features: "E-40",
+      producers: "DJ Mustard, Kanye West, DJ Dahi",
       album: "I Don't Fuck With You",
       url: "http://www.youtube.com/watch?v=cZaJYDPY-YQ",
       image: "http://thumbs.hh.ulximg.com/public/img/song/500_1410553070_artworks_000090836493_ld5aa3_t500x500_42.jpg",
@@ -97,6 +101,8 @@ samp3 = Sample.new(
 song3 = Song.new(
       title: "6 God",
       artist: "Drake",
+      features: "",
+      producers: "Boi-1da, SykSense",
       album: "6 God",
       url: "http://www.youtube.com/watch?v=NHZPpzLe73Y",
       image: "https://i1.sndcdn.com/artworks-000095053782-whizz1-t500x500.jpg",
@@ -110,8 +116,31 @@ samp4 = Sample.new(
         other_times: "",
         artist: "David Wise",
         url: "http://www.youtube.com/watch?v=CFRsMztuM30",
-        description: "The sample starts at 0:49. [Producer Syk Sense confirmed this on Twitter](http://i.imgur.com/kbkpsT6.png)",
+        description: "The sample starts at 0:49. [Producer SykSense confirmed this on Twitter](http://i.imgur.com/kbkpsT6.png)",
         song_id: 3
 
   )
   samp4.save
+
+song4 = Song.new(
+      title: "Love Sosa",
+      artist: "Chief Keef",
+      features: "",
+      producers: "Young Chop",
+      album: "Finally Rich",
+      url: "http://www.youtube.com/watch?v=YWyHZNBz6FE",
+      image: "http://www.ventlyfe.com/_pu/0/14786225.jpg",
+      description: "\"Love Sosa\" is the second single by rapper Chief Keef from his debut album Finally Rich. It was produced by Young Chop and Dougie. It was composed by Keith Cozart and Tyree Pittman for Chief Keef's first studio album Finally Rich. The song was released as the album's second single on October 18, 2012."
+
+  )
+  song4.save
+
+ele2 = Element.new(
+        starting_time: "0:00",
+        other_times: "",
+        source: "Gladiator",
+        description: "Preset - PA 60dub JC under Pads",
+        song_id: 4
+
+  )
+  ele2.save
