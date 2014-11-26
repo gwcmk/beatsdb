@@ -47,7 +47,7 @@ samp1 = Sample.new(
         other_times: "",
         artist: "Teachers",
         url: "",
-        description: "The distinctive riff from New Slaves originated from a demo by Benjamin Bronfman, a member of a collective known as the Teachers. \/n Link: [http://teachers.fm/](http://teachers.fm/)",
+        description: "The distinctive riff from New Slaves originated from a demo by Benjamin Bronfman, a member of a collective known as the Teachers. Link: [http://teachers.fm/](http://teachers.fm/)",
         song_id: 1
 
   )
