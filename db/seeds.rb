@@ -144,3 +144,51 @@ ele2 = Element.new(
 
   )
   ele2.save
+
+song5 = Song.new(
+      title: "Detroit vs. Everybody",
+      artist: "Eminem",
+      features: "Royce Da 5'9'', Big Sean, Danny Brown, Dej Loaf, Trick Trick",
+      producers: "Statik Selektah",
+      album: "Shady XV",
+      url: "http://www.youtube.com/watch?v=vjUgJ6Cw5PU",
+      image: "http://upload.wikimedia.org/wikipedia/en/9/9c/Shady_Records_-_Shady_XV_(Artwork).jpg",
+      description: "\“Detroit Vs Everybody\” is the third single from upcoming Shady Records compilation album, SHADY XV. Featuring several of Detroit’s prominent rappers, each verse tells a different story. Some of the major themes include gratitude for growing up in Detroit, the rough nature of the streets and why people call Detroit home."
+
+  )
+  song5.save
+
+samp5 = Sample.new(
+        starting_time: "0:12",
+        other_times: "",
+        artist: "James Brown",
+        url: "http://www.youtube.com/watch?v=dNP8tbDMZNE",
+        description: "This is one of the most popular drum samples of all time. It appears at 5:35.",
+        song_id: 5
+
+  )
+  samp5.save
+
+song6 = Song.new(
+      title: "i",
+      artist: "Kendrick Lamar",
+      features: "",
+      producers: "Rahki",
+      album: "i",
+      url: "http://www.youtube.com/watch?v=8aShfolR6w8",
+      image: "http://upload.wikimedia.org/wikipedia/en/c/c6/I-by-Kendrick-Lamar.jpg",
+      description: "\"i\" is a song by American rapper Kendrick Lamar, released on September 23, 2014, as the lead single from his upcoming yet-to-be-titled third studio album."
+
+  )
+  song6.save
+
+samp6 = Sample.new(
+        starting_time: "0:47",
+        other_times: "",
+        artist: "The Isley Brothers",
+        url: "http://www.youtube.com/watch?v=q1DDgNCLD84",
+        description: "\"i\" heavily samples this Isley Brothers song. [Kendrick personally got the Isley Brothers' blessing to sample their song.](http://www.hotnewhiphop.com/kendrick-lamar-speaks-on-new-single-i-update-full-interview-with-power-106-added-news.12161.html) Rather than simply sample the song, [they re-recorded it with live instruments](http://www.mtv.com/news/1948055/kendrick-lamar-i-producer/)",
+        song_id: 6
+
+  )
+  samp6.save

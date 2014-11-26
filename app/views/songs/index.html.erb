@@ -13,6 +13,8 @@
   </div>
 </div>
 
+<% count = 1 %>
+
 <div class="container">
     <div class="row song">
       <div class="col-md-12">
@@ -31,6 +33,11 @@
             </div>
         <% end %>
         </div>
+        <% if count % 3 == 0 %>
+        </div></div>
+        <div class="row song"><div class="col-md-12">
+        <% end %>
+        <% count += 1 %>
         <% end %>
       </div>
     </div>
