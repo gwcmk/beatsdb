@@ -36,7 +36,7 @@ song1 = Song.new(
       producers: "Kanye West, Ben Bronfman, Mike Dean, Travis Scott, Noah Goldstein, Sham Joseph, Che Pope",
       album: "Yeezus",
       url: "http://www.youtube.com/watch?v=dT3swdCJrrg",
-      image: "http://i.ytimg.com/vi/UY982Uo2TPI/maxresdefault.jpg",
+      image: "http://i.imgur.com/WxOSUmo.jpg",
       description: "PRAISE YEEZUS"
 
   )
