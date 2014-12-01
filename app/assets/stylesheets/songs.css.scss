@@ -109,3 +109,14 @@
 	}
 }
 
+@media only screen and (max-device-width: 480px) {
+	.song-panel{
+		img{
+		  	display: inline-block;
+		  	max-height: 75px;
+		  	max-width: 75px;
+		  	margin: 0 1em 0 0;
+	  	}
+	}	
+}
+
