@@ -23,31 +23,32 @@
 }
 
 // Index page
-.song{
-	.song-panel{
-	  background-color: #212121;
-	  color: #fff;
-	  padding: 0.5em;
-	  border-radius: 5px;
-	  margin: 2em auto;
 
-	  .song-summary{
-	  	max-width: 50%;
-	  	display: inline-block;
-	  	vertical-align: middle;
-	  	h4, p{
-			white-space: nowrap;
-	  		text-overflow: ellipsis;
-	  		overflow: hidden;
-	  	}
-	  }
-	  img{
-	  	display: inline-block;
-	  	max-height: 100px;
-	  	max-width: 100px;
-	  	margin: 0 1em 0 0;
-	  }
-	}
+.song-panel{
+  background-color: #212121;
+  color: #fff;
+  padding: 0.5em;
+  border-radius: 5px;
+  margin: 2em auto;
+
+  .song-summary{
+  	max-width: 50%;
+  	display: inline-block;
+  	vertical-align: middle;
+  	h4, p{
+		white-space: nowrap;
+  		text-overflow: ellipsis;
+  		overflow: hidden;
+  	}
+  }
+  img{
+  	display: inline-block;
+  	max-height: 100px;
+  	max-width: 100px;
+  	margin: 0 1em 0 0;
+  }
+}
+.song{
 	a{
 		color: #fff!important;
 	}
@@ -70,6 +71,41 @@
 	margin-bottom: 1em;
 	h4{
 		margin: 0;
+	}
+}
+
+// Media queries for smaller phones
+
+@media screen and (device-aspect-ratio: 2/3) {
+	.song-panel{
+		img{
+		  	display: inline-block;
+		  	max-height: 75px;
+		  	max-width: 75px;
+		  	margin: 0 1em 0 0;
+	  	}
+	}
+}
+
+@media screen and (device-aspect-ratio: 40/71) {
+	.song-panel{
+		img{
+		  	display: inline-block;
+		  	max-height: 75px;
+		  	max-width: 75px;
+		  	margin: 0 1em 0 0;
+	  	}
+	}
+}
+
+@media screen and (device-aspect-ratio: 667/375) {
+	.song-panel{
+		img{
+		  	display: inline-block;
+		  	max-height: 75px;
+		  	max-width: 75px;
+		  	margin: 0 1em 0 0;
+	  	}
 	}
 }
 
