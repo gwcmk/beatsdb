@@ -35,7 +35,7 @@
 	  	max-width: 50%;
 	  	display: inline-block;
 	  	vertical-align: middle;
-	  	p{
+	  	h4, p{
 			white-space: nowrap;
 	  		text-overflow: ellipsis;
 	  		overflow: hidden;
@@ -43,8 +43,8 @@
 	  }
 	  img{
 	  	display: inline-block;
-	  	max-height: 125px;
-	  	max-width: 125px;
+	  	max-height: 100px;
+	  	max-width: 100px;
 	  	margin: 0 1em 0 0;
 	  }
 	}
