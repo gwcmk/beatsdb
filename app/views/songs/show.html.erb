@@ -10,7 +10,9 @@
 		      <h4>Produced by: <%= @song.producers %></h3>
 		      <p><%= markdown.render(@song.description).html_safe %></p>
 
-		      <%= link_to "Delete", song_path, method: :delete, data:{confirm: "You sure?"} %>
+		      <% if false %>
+				<%= link_to "Delete", song_path, method: :delete, data:{confirm: "You sure?"} %>
+			  <% end %>
 		  </div>
 		  <div class="col-md-6 col-md-pull-6 song-video">
 		    <div class="embed-responsive embed-responsive-16by9">
