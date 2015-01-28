@@ -11,11 +11,11 @@
 }
 
 .btn-primary:not(.btn-link){
-	background-color: #212121;
+	background-color: #212121!important;
 }
 
 .btn:not(.btn-link), .btn-default:not(.btn-link){
-	background-color: #212121;
+	background-color: #212121!important;
 }
 
 @import "railsbricks_custom";
