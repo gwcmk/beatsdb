@@ -28,6 +28,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    bcrypt (3.1.9)
     bcrypt (3.1.9-x64-mingw32)
     bootstrap-material-design (0.1.2)
       bootstrap-sass (~> 3.0)
@@ -75,6 +76,7 @@ GEM
     minitest (5.4.2)
     multi_json (1.10.1)
     orm_adapter (0.5.0)
+    pg (0.17.1)
     pg (0.17.1-x64-mingw32)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -140,6 +142,7 @@ GEM
     youtube_addy (1.0.4)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
