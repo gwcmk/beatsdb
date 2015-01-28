@@ -4,10 +4,6 @@
  *= require bootstrap-material-design
  *= require_self
  */
-@import "railsbricks_custom";
-@import "songs";
-@import "samples";
-
 
 /* Override material design */
 .btn{
@@ -21,4 +17,11 @@
 .btn:not(.btn-link), .btn-default:not(.btn-link){
 	background-color: #212121;
 }
+
+@import "railsbricks_custom";
+@import "songs";
+@import "samples";
+
+
+
 
